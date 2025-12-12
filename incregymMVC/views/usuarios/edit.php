@@ -98,10 +98,7 @@
     <p class="text-muted">Este usuario aún no tiene una rutina asignada.</p>
     <?php endif; ?>
 
-
-    <!-- ========================================================= -->
-    <!-- 📌 ASIGNAR O CAMBIAR RUTINA -->
-    <!-- ========================================================= -->
+    <!--  ASIGNAR O CAMBIAR RUTINA -->
 
     <form action="<?= $base ?>/index.php?url=usuarios/asignarRutinaStore" method="POST" class="mt-3">
 

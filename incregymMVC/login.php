@@ -34,9 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "rol"      => $empleado['rol']
         ];
 
-        /* ======================================================
-           💾 RECORDAR USUARIO (COOKIE 30 DÍAS)
-        ====================================================== */
+        /* 💾 RECORDAR USUARIO (COOKIE 30 DÍAS) */
         if (isset($_POST['recordarme'])) {
             setcookie("usuario_recordado", $usuario, time() + (30*24*60*60), "/");
         } else {
