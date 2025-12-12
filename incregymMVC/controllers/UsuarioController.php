@@ -10,7 +10,7 @@ class UsuarioController {
     private string $base;
 
     public function __construct() {
-        $this->base = "/TrabajoFinal/incregymMVC";
+        $this->base = "/Torres_SantiagoEzequiel_27/incregymMVC";
     }
 
     // Listado

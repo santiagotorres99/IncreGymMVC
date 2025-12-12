@@ -11,7 +11,7 @@ class RutinaController
 
     public function __construct()
     {
-        $this->base = "/TrabajoFinal/incregymMVC";
+        $this->base = "/Torres_SantiagoEzequiel_27/incregymMVC";
     }
 
     public function index()

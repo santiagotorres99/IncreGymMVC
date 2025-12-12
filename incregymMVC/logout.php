@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: /TrabajoFinal/incregymMVC/login.php");
+header("Location: /Torres_SantiagoEzequiel_27/incregymMVC/login.php");
 exit;

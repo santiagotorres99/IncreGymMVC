@@ -62,7 +62,7 @@ class EmpleadoController
             !preg_match("/^[0-9]{8}[A-Za-z]$/", $dni) &&
             !preg_match("/^[XYZxyz][0-9]{7}[A-Za-z]$/", $dni)
         ) {
-            die("DNI/NIE incorrecto.");
+            die("DNI/NIE incorrecto. Formato inválido.Ej: 12345678A o Y1234567Q");
         }
 
         if (!preg_match("/^[0-9]{9}$/", $telefono)) {

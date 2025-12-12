@@ -73,7 +73,7 @@
 
                                 // Si es imagen local subida por ti
                                 } else {
-                                    $ruta = "/TrabajoFinal/incregymMVC/" . $img;
+                                    $ruta = "/Torres_SantiagoEzequiel_27/incregymMVC/" . $img;
                                 }
                             ?>
                         <img src="<?= $ruta ?>"

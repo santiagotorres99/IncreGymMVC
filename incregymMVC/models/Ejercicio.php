@@ -17,7 +17,7 @@ class Ejercicio {
         return $stmt->execute([
             $data['rutina_id'],
             $data['nombre'],
-            $data['imagen'],   // ← ESTA ES LA QUE FALTABA
+            $data['imagen'],   
             $data['series'],
             $data['descanso'],
             $data['video']

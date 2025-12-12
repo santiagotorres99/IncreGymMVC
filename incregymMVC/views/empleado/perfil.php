@@ -4,9 +4,10 @@
 
     <div class="text-center mb-4">
         <?php if (!empty($empleado['foto'])): ?>
-        <img src="/TrabajoFinal/incregymMVC/uploads/empleados/<?= $empleado['foto'] ?>" class="perfil-foto">
+        <img src="/Torres_SantiagoEzequiel_27/incregymMVC/uploads/empleados/<?= $empleado['foto'] ?>"
+            class="perfil-foto">
         <?php else: ?>
-        <img src="/TrabajoFinal/incregymMVC/assets/img/default-user.png" class="perfil-foto">
+        <img src="/Torres_SantiagoEzequiel_27/incregymMVC/assets/img/default-user.png" class="perfil-foto">
         <?php endif; ?>
     </div>
 

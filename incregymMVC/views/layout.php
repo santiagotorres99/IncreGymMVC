@@ -1,6 +1,6 @@
 <?php 
 // Ruta base del proyecto
-$base = "/TrabajoFinal/incregymMVC";
+$base = "/Torres_SantiagoEzequiel_27/incregymMVC";
 ?>
 
 <!DOCTYPE html>
