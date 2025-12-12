@@ -1,7 +1,7 @@
 <div class="card p-4">
     <h3 class="fw-bold mb-3">🏋️ Rutinas</h3>
 
-    <a href="<?= $base ?>/index.php?url=rutinas/create" class="btn btn-success mb-3">
+    <a href="<?= $base ?>/index.php?url=rutinas/create" class="btn btn-primary mb-3">
         ➕ Crear nueva rutina
     </a>
 
@@ -32,7 +32,7 @@
                     </a>
 
                     <!-- EDITAR -->
-                    <a href="<?= $base ?>/index.php?url=rutinas/edit&id=<?= $r['id'] ?>" class="btn btn-warning btn-sm">
+                    <a href="<?= $base ?>/index.php?url=rutinas/edit&id=<?= $r['id'] ?>" class="btn btn-primary btn-sm">
                         ✏️ Editar
                     </a>
 

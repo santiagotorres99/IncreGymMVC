@@ -60,8 +60,9 @@
 
         <!-- BOTONES -->
         <div class="mt-3 d-flex gap-2">
-            <button type="button" id="btnAtras" class="btn btn-secondary">Atrás</button>
-            <button class="btn btn-success">Actualizar usuario</button>
+            <button class="btn btn-primary">Actualizar usuario</button>
+            <button type="button" id="btnAtras" class="btn btn-danger">Atrás</button>
+
         </div>
     </form>
 
@@ -82,7 +83,7 @@
         </p>
 
         <a href="<?= $base ?>/index.php?url=rutinas/show&id=<?= $rutinaActual['id'] ?>"
-            class="btn btn-primary btn-sm me-2">
+            class="btn btn-info btn-sm me-2">
             👀 Ver rutina
         </a>
 
@@ -117,6 +118,6 @@
             <?php endforeach; ?>
         </select>
 
-        <button class="btn btn-success mt-2">Guardar rutina</button>
+        <button class="btn btn-primary mt-2">Guardar rutina</button>
     </form>
 </div>

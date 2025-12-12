@@ -46,7 +46,7 @@ $iconosObjetivos = [
                         class="btn btn-info btn-sm">Ver</a>
 
                     <a href="<?= $base ?>/index.php?url=usuarios/edit&id=<?= $u['id'] ?>"
-                        class="btn btn-warning btn-sm">Editar</a>
+                        class="btn btn-primary btn-sm">Editar</a>
 
                     <a href="<?= $base ?>/index.php?url=usuarios/delete&id=<?= $u['id'] ?>"
                         class="btn btn-danger btn-sm btn-borrar">Borrar</a>

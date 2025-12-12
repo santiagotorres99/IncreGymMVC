@@ -46,8 +46,8 @@
             <span class="error-msg">Introduce un email válido</span>
         </div>
 
-        <button class="btn-incre-primary mt-3">Guardar cambios</button>
-        <a href="<?= $base ?>/index.php?url=empleado/perfil" class="btn-incre-back mt-3">Cancelar</a>
+        <button class="btn btn-primary mt-3">Guardar cambios</button>
+        <a href="<?= $base ?>/index.php?url=empleado/perfil" class="btn btn-danger mt-3">Cancelar</a>
 
     </form>
 </div>

@@ -5,7 +5,7 @@
             <?= htmlspecialchars($usuario['nombre']) ?> <?= htmlspecialchars($usuario['apellidos']) ?>
         </h2>
 
-        <a href="<?= $base ?>/index.php?url=usuarios/edit&id=<?= $usuario['id'] ?>" class="btn btn-warning btn-sm">
+        <a href="<?= $base ?>/index.php?url=usuarios/edit&id=<?= $usuario['id'] ?>" class="btn btn-primary btn-btn">
             ✏️ Editar usuario
         </a>
     </div>

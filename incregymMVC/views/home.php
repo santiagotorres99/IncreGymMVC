@@ -8,7 +8,7 @@
     <p class="text-muted">Hoy no tienes clases programadas.</p>
     <?php else: ?>
 
-    <table class="table agenda-dia-table mt-3">
+    <table class="table tabla-home">
         <thead>
             <tr>
                 <th>Hora</th>
@@ -20,36 +20,35 @@
         </thead>
 
         <tbody>
-
             <?php foreach ($clasesHoy as $c): ?>
 
-            <?php
-                $estado = strtolower($c["estado"]);
-                $claseFila = match ($estado) {
-                    "realizada" => "fila-realizada",
-                    "pendiente" => "fila-pendiente",
-                    "cancelada" => "fila-cancelada",
-                    default => "",
-                };
+            <?php 
+            $estadoClass = match ($c['estado']) {
+                'realizada' => 'fila-realizada',
+                'cancelada' => 'fila-cancelada',
+                default     => 'fila-pendiente',
+            };
 
-                $icono = match ($estado) {
-                    "realizada" => "✔️",
-                    "pendiente" => "⏳",
-                    "cancelada" => "❌",
-                    default => "",
-                };
-            ?>
+            $icono = match ($c['estado']) {
+                'realizada' => '✔️',
+                'cancelada' => '❌',
+                default     => '⏳'
+            };
+        ?>
 
-            <tr class="<?= $claseFila ?>">
-                <td><?= substr($c['hora'],0,5) ?></td>
-                <td><?= htmlspecialchars($c['actividad']) ?></td>
-                <td><?= (int)$c['duracion_min'] ?> min</td>
-                <td><?= (int)$c['apuntados'] ?></td>
-                <td><strong><?= $icono ?> <?= htmlspecialchars($c['estado']) ?></strong></td>
+            <tr class="<?= $estadoClass ?>">
+                <td class="col-hora"><?= substr($c['hora'], 0, 5) ?></td>
+
+                <td class="col-actividad"><?= htmlspecialchars($c['actividad']) ?></td>
+
+                <td><?= $c['duracion_min'] ?> min</td>
+
+                <td><?= $c['apuntados'] ?></td>
+
+                <td class="col-estado"><?= $icono . " " . $c['estado'] ?></td>
             </tr>
 
             <?php endforeach; ?>
-
         </tbody>
     </table>
 

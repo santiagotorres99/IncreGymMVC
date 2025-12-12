@@ -49,8 +49,9 @@
 
         <!-- BOTONES -->
         <div class="mt-3 d-flex gap-2">
-            <a href="<?= $base ?>/index.php?url=usuarios" class="btn btn-secondary">Atrás</a>
-            <button class="btn btn-success">Guardar usuario</button>
+            <button class="btn btn-primary">Guardar usuario</button>
+            <a href="<?= $base ?>/index.php?url=usuarios" class="btn btn-danger">Atrás</a>
+
         </div>
     </form>
 </div>

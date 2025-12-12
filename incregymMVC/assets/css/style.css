@@ -224,72 +224,7 @@
     background: var(--rojo-oscuro);
 }
 
-/* Botón principal (acciones importantes: Guardar, Crear...) */
-.btn-incre-primary {
-    background: var(--amarillo);
-    color: black !important;
-    font-weight: 700;
-    border: none;
-    padding: 7px 14px;
-    border-radius: 8px;
-}
-.btn-incre-primary:hover {
-    background: var(--amarillo-oscuro);
-    color: white !important;
-}
 
-/* Botón "Ver" */
-.btn-incre-ver {
-    background: #FFD000;
-    color: black !important;
-    border: 2px solid black;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 8px;
-}
-.btn-incre-ver:hover {
-    background: #d4ad00;
-}
-
-/* Botón Editar */
-.btn-incre-edit {
-    background: var(--naranja);
-    color: black !important;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: none;
-}
-.btn-incre-edit:hover {
-    background: var(--amarillo);
-    color: black !important;
-}
-
-/* Botón Borrar */
-.btn-incre-delete {
-    background: var(--rojo);
-    color: white !important;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: none;
-}
-.btn-incre-delete:hover {
-    background: var(--rojo-oscuro);
-}
-
-/* Botón Gris para volver atrás */
-.btn-incre-back {
-    background: var(--rojo);
-    color: white !important;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 8px;
-}
-.btn-incre-back:hover {
-    background: #bd5050;
-    color: white !important;
-}
 
 /* =====================================================
    TABLAS PROFESIONALES
@@ -776,20 +711,52 @@ input:focus, select:focus, textarea:focus {
     color: var(--amarillo); 
 }
 
-/* ====== ESTADOS EN HOME ====== */
 
-table.agenda-dia-table tbody tr.fila-realizada td {
-    background-color: #d4edda !important;   /* verde suave */
+/* === TABLA HOME  === */
+
+.tabla-home {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-table.agenda-dia-table tbody tr.fila-pendiente td {
-    background-color: #fff3cd !important;   /* amarillo suave */
+/* HEADER NEGRO */
+.tabla-home thead th {
+    background: #000 !important;
+    color: #FFD000 !important;  /* Amarillo */
+    padding: 12px;
+    font-weight: bold;
+    border: none;
 }
 
-table.agenda-dia-table tbody tr.fila-cancelada td {
-    background-color: #f8d7da !important;   /* rojo suave */
+/* FILAS (todas sobre fondo negro) */
+.tabla-home tbody tr td {
+    background: #111 !important;
+    color: white;
+    padding: 14px;
+    border-top: 1px solid #222;
 }
 
-table.agenda-dia-table tbody tr td {
-    transition: background-color 0.3s ease;
+/* FILA ESTADOS — solo borde izq cambia */
+.fila-realizada td {
+    border-left: 6px solid #2ecc71 !important;
+}
+
+.fila-pendiente td {
+    border-left: 6px solid #f1c40f !important;
+}
+
+.fila-cancelada td {
+    border-left: 6px solid #e74c3c !important;
+    opacity: 0.8;
+}
+
+/* HORA y ACTIVIDAD en amarillo */
+.tabla-home .col-hora,
+.tabla-home .col-actividad {
+    color: #FFD000 !important;
+    font-weight: bold;
 }

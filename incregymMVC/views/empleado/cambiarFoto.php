@@ -14,8 +14,8 @@
         <label class="form-label fw-bold">Selecciona una nueva foto</label>
         <input type="file" name="foto" class="form-control mb-3" accept="image/*" required>
 
-        <button class="btn-incre-primary mt-2">Guardar foto</button>
-        <a href="<?= $base ?>/index.php?url=empleado/perfil" class="btn-incre-back mt-2">Cancelar</a>
+        <button class="btn btn-primary mt-2">Guardar foto</button>
+        <a href="<?= $base ?>/index.php?url=empleado/perfil" class="btn btn-danger mt-2">Cancelar</a>
 
     </form>
 

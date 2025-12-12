@@ -37,6 +37,6 @@
 
         <hr>
 
-        <button class="btn btn-success w-100">Guardar rutina</button>
+        <button class="btn btn-primary w-100">Guardar rutina</button>
     </form>
 </div>

@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <button class="btn btn-success mt-3 w-100">Añadir ejercicio</button>
+        <button class="btn btn-primary mt-3 w-100">Añadir ejercicio</button>
     </form>
 
 </div>
