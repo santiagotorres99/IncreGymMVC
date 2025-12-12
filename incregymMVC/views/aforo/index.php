@@ -14,16 +14,17 @@ $MAX_PESO   = 40;
         <form method="get" class="d-flex align-items-center gap-2 mt-2">
             <input type="hidden" name="url" value="aforo/index">
             <label class="form-label mb-0">Fecha:</label>
+
             <input type="date" name="fecha" class="form-control" style="width: 170px;"
                 value="<?= htmlspecialchars($fecha) ?>">
-            <button class="btn btn-primary btn-sm">Ir</button>
+
+            <button class="btn-incre-primary btn-sm">Ir</button>
         </form>
     </div>
 
     <p class="text-muted mb-3">
-        Rellenar el aforo manual de cada zona por cada hora. Si se supera el máximo, el campo se marcará en rojo y
-        verás
-        un ⚠.
+        Rellena el aforo manual de cada zona por cada hora.
+        Si se supera el máximo, el campo se marcará en rojo y aparecerá ⚠.
     </p>
 
     <form method="post" action="<?= $base ?>/index.php?url=aforo/guardar" id="formAforo">
@@ -39,13 +40,14 @@ $MAX_PESO   = 40;
                         <th>Peso libre<br><small>Máx <?= $MAX_PESO ?></small></th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <?php foreach ($horas as $hora): 
-        $row = $datos[$hora] ?? null;
-        $valorCardio = $row['zona_cardio']      ?? '';
-        $valorMaq    = $row['zona_maquinas']    ?? '';
-        $valorPeso   = $row['zona_peso_libre']  ?? '';
-    ?>
+                        $row = $datos[$hora] ?? null;
+                        $valorCardio = $row['zona_cardio']      ?? '';
+                        $valorMaq    = $row['zona_maquinas']    ?? '';
+                        $valorPeso   = $row['zona_peso_libre']  ?? '';
+                    ?>
                     <tr>
                         <td class="fw-bold"><?= $hora ?></td>
 
@@ -85,8 +87,8 @@ $MAX_PESO   = 40;
         </div>
 
         <div class="mt-3 d-flex gap-2">
-            <button class="btn btn-primary">Guardar cambios</button>
-            <a href="<?= $base ?>/index.php?url=home/index" class="btn btn-secondary">Cancelar</a>
+            <button class="btn-incre-primary">Guardar cambios</button>
+            <a href="<?= $base ?>/index.php?url=home/index" class="btn-incre-back">Cancelar</a>
         </div>
     </form>
 </div>

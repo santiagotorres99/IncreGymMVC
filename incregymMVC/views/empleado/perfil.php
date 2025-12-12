@@ -19,8 +19,8 @@
     <p><strong>Rol:</strong> <?= htmlspecialchars($empleado['rol']) ?></p>
 
     <div class="mt-4 d-flex gap-3">
-        <a href="<?= $base ?>/index.php?url=empleado/cambiarFoto" class="btn btn-warning">Cambiar foto</a>
-        <a href="<?= $base ?>/index.php?url=empleado/editar" class="btn btn-primary">Editar perfil</a>
+        <a href="<?= $base ?>/index.php?url=empleado/cambiarFoto" class="btn-incre-edit">Cambiar foto</a>
+        <a href="<?= $base ?>/index.php?url=empleado/editar" class="btn-incre-primary">Editar perfil</a>
     </div>
 
 </div>

@@ -5,7 +5,7 @@
             <p class="text-muted mb-0"><strong>Objetivo:</strong> <?= htmlspecialchars($rutina['objetivo']) ?></p>
         </div>
 
-        <a href="<?= $base ?>/index.php?url=rutinas/edit&id=<?= $rutina['id'] ?>" class="btn btn-warning">
+        <a href="<?= $base ?>/index.php?url=rutinas/edit&id=<?= $rutina['id'] ?>" class="btn btn-incre-edit">
             ✏️ Editar rutina
         </a>
     </div>

@@ -7,6 +7,7 @@
     <?php if (empty($clasesHoy)): ?>
     <p class="text-muted">Hoy no tienes clases programadas.</p>
     <?php else: ?>
+
     <table class="table agenda-dia-table mt-3">
         <thead>
             <tr>
@@ -17,17 +18,40 @@
                 <th>Estado</th>
             </tr>
         </thead>
+
         <tbody>
+
             <?php foreach ($clasesHoy as $c): ?>
-            <tr>
+
+            <?php
+                $estado = strtolower($c["estado"]);
+                $claseFila = match ($estado) {
+                    "realizada" => "fila-realizada",
+                    "pendiente" => "fila-pendiente",
+                    "cancelada" => "fila-cancelada",
+                    default => "",
+                };
+
+                $icono = match ($estado) {
+                    "realizada" => "✔️",
+                    "pendiente" => "⏳",
+                    "cancelada" => "❌",
+                    default => "",
+                };
+            ?>
+
+            <tr class="<?= $claseFila ?>">
                 <td><?= substr($c['hora'],0,5) ?></td>
                 <td><?= htmlspecialchars($c['actividad']) ?></td>
                 <td><?= (int)$c['duracion_min'] ?> min</td>
                 <td><?= (int)$c['apuntados'] ?></td>
-                <td><?= htmlspecialchars($c['estado']) ?></td>
+                <td><strong><?= $icono ?> <?= htmlspecialchars($c['estado']) ?></strong></td>
             </tr>
+
             <?php endforeach; ?>
+
         </tbody>
     </table>
+
     <?php endif; ?>
 </div>

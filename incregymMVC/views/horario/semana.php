@@ -29,10 +29,24 @@
                     <td>
                         <?php if (!empty($grid[$hora][$dia])): ?>
                         <?php foreach ($grid[$hora][$dia] as $clase): ?>
-                        <div class="clase-item">
+                        <?php
+                            $estadoClass = match ($clase['estado']) {
+                                'realizada' => 'clase-realizada',
+                                'cancelada' => 'clase-cancelada',
+                                default     => 'clase-pendiente',
+                            };
 
-                            <div class="clase-nombre">
-                                <?= htmlspecialchars($clase['actividad']) ?>
+                            $icono = match ($clase['estado']) {
+                                'realizada' => '✔️',
+                                'cancelada' => '❌',
+                                default     => '⏳',
+                            };
+                            ?>
+                        <div class="clase-item <?= $estadoClass ?>">
+
+                            <div class="clase-nombre-wrapper">
+                                <span class="clase-nombre"><?= htmlspecialchars($clase['actividad']) ?></span>
+                                <span class="clase-estado-icon"><?= $icono ?></span>
                             </div>
 
                             <div class="clase-prof">
