@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../config/Database.php';
 require_once __DIR__ . '/../models/Rutina.php';
 require_once __DIR__ . '/../models/Ejercicio.php';
+require_once __DIR__ . '/../config/paths.php';
 
 class RutinaController
 {
@@ -11,7 +12,7 @@ class RutinaController
 
     public function __construct()
     {
-        $this->base = "/Torres_SantiagoEzequiel_27/incregymMVC";
+        $this->base = base_path();
     }
 
     public function index()

@@ -3,10 +3,10 @@
 
     <p>¿Seguro que quieres eliminar <strong><?= $rutina['nombre'] ?></strong>?</p>
 
-    <form action="/incregymMVC/?url=rutinas/destroy" method="POST">
+    <form action="<?= $base ?>/index.php?url=rutinas/destroy" method="POST">
         <input type="hidden" name="id" value="<?= $rutina['id'] ?>">
 
         <button class="btn btn-danger">Sí, eliminar</button>
-        <a class="btn btn-secondary" href="/incregymMVC/?url=rutinas">Cancelar</a>
+        <a class="btn btn-secondary" href="<?= $base ?>/index.php?url=rutinas">Cancelar</a>
     </form>
 </div>

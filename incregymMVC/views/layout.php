@@ -1,6 +1,6 @@
-<?php 
-// Ruta base del proyecto
-$base = "/Torres_SantiagoEzequiel_27/incregymMVC";
+<?php
+require_once __DIR__ . '/../config/paths.php';
+$base = base_path();
 ?>
 
 <!DOCTYPE html>

@@ -7,7 +7,7 @@
 
         <div class="text-center mb-4">
             <img src="<?= !empty($empleado['foto']) 
-                ? '/Torres_SantiagoEzequiel_27/incregymMVC/uploads/empleados/' . $empleado['foto'] 
+                ? $base . '/uploads/empleados/' . $empleado['foto'] 
                 : $base . '/assets/img/default-user.png' ?>" class="perfil-foto">
         </div>
 

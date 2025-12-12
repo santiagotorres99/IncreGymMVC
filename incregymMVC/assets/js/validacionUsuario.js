@@ -105,7 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnAtras) {
         btnAtras.addEventListener("click", () => {
             if (confirm("¿Seguro que quieres salir? No se aplicarán los cambios no guardados.")) {
-                window.location.href = "/incregymMVC/?url=usuarios";
+                const base = (typeof baseUrl !== "undefined") ? baseUrl : "";
+                window.location.href = `${base}/index.php?url=usuarios`;
             }
         });
     }
